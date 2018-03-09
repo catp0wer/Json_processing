@@ -12,20 +12,20 @@ public class CreateJson {
 
     public static void main(String[] args){
 
-        CD cdNirvana = new CD("d1","d2","d3","d4","d5","d6","d7");
-        CD cdCranberries = new CD("a1","a2","a3","a4","a5","a6","a7");
+        CD cdNirvana = new CD("88","Nevermind","Nirvana","USA","Butch Vig","10.90","1991");
+        CD cdCranberries = new CD("89","No Need to Argue","The Cranberries","UK","CBS Records","9.90","1994");
         ArrayList<CD> my_list = new ArrayList<CD>();
         my_list.add(cdNirvana);
         my_list.add(cdCranberries);
-        Catalog music  = new Catalog(my_list);
 
         ObjectMapper mapper = new ObjectMapper();
-        Map<String,CD> myMap = new HashMap<String,CD>();
-        myMap.put("Cd1",cdNirvana);
-        myMap.put("Cd2",cdCranberries);
+        Map<String,ArrayList<CD>> myMap = new HashMap<String,ArrayList<CD>>();
+        myMap.put("CD",my_list);
+        Map<String,Map> final_myMap = new HashMap<String,Map>();
+        final_myMap.put("CATALOG",myMap);
 
         try {
-            mapper.writeValue(new File("music.json"), myMap);
+            mapper.writeValue(new File("music.json"), final_myMap);
         }catch (JsonMappingException e) {
             e.printStackTrace();
         } catch (IOException e) {

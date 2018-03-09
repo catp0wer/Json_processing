@@ -1,2 +1,1 @@
-{"Cd2":{"id":"a1","title":"a2","artist":"a3","country":"a4","company":"a5","price":"a6","year":"a7"},
-  "Cd1":{"id":"d1","title":"d2","artist":"d3","country":"d4","company":"d5","price":"d6","year":"d7"}}
+{"CATALOG":{"CD":[{"id":"88","title":"Nevermind","artist":"Nirvana","country":"USA","company":"Butch Vig","price":"10.90","year":"1991"},{"id":"89","title":"No Need to Argue","artist":"The Cranberries","country":"UK","company":"CBS Records","price":"9.90","year":"1994"}]}}
