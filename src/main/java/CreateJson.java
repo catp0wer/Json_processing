@@ -25,6 +25,7 @@ public class CreateJson {
         final_myMap.put("CATALOG",myMap);
 
         try {
+            //serialization of map
             mapper.writeValue(new File("music.json"), final_myMap);
         }catch (JsonMappingException e) {
             e.printStackTrace();
